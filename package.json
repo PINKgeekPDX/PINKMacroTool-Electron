@@ -1,0 +1,57 @@
+{
+  "name": "pinkmacrotool-electron",
+  "version": "1.0.0",
+  "description": "A sophisticated desktop application for creating and managing highly customizable macros with keyboard and joystick inputs",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --debug",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
+  },
+  "keywords": [
+    "macro",
+    "automation",
+    "keyboard",
+    "joystick",
+    "gamepad"
+  ],
+  "author": "PINKMacroTool",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "uuid": "^9.0.1"
+  },
+  "optionalDependencies": {
+    "robotjs": "^0.6.0"
+  },
+  "build": {
+    "appId": "com.pinkmacrotool.app",
+    "productName": "PINKMacroTool",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    }
+  }
+}
+

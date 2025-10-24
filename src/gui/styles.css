@@ -1,0 +1,516 @@
+/**
+ * PINKMacroTool - Styles
+ * Sci-Fi Dark Theme with Dark Blue and Light Blue accents
+ * Matching the PyQt6 application styling
+ */
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 10pt;
+    background-color: #0d1b2a;
+    color: #e0e1dd;
+    overflow: hidden;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Menu Bar */
+.menu-bar {
+    display: flex;
+    background-color: #1b263b;
+    border-bottom: 1px solid #415a77;
+    padding: 8px 16px;
+    gap: 20px;
+}
+
+.menu-item {
+    color: #e0e1dd;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.menu-item:hover {
+    background-color: #2d3e50;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Left Panel */
+.left-panel {
+    width: 33%;
+    min-width: 300px;
+    background-color: #0d1b2a;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #415a77;
+    overflow-y: auto;
+}
+
+.panel-section {
+    background-color: #1b263b;
+    border: 1px solid #415a77;
+    border-radius: 4px;
+    margin: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-section:first-child {
+    flex: 1;
+    min-height: 200px;
+}
+
+.panel-header {
+    color: #4a9eff;
+    font-weight: bold;
+    font-size: 11pt;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.panel-icon {
+    font-size: 14pt;
+}
+
+/* Device List */
+.device-list {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 12px;
+}
+
+.device-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin: 4px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.device-item:hover {
+    background-color: #2d3e50;
+}
+
+.device-item.selected {
+    background-color: #1565c0;
+    color: #ffffff;
+}
+
+.device-checkbox {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    accent-color: #1565c0;
+}
+
+/* Capability List */
+.capability-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.capability-item {
+    padding: 6px 8px;
+    margin: 2px 0;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.capability-item:hover {
+    background-color: #2d3e50;
+}
+
+.capability-item.selected {
+    background-color: #1565c0;
+    color: #ffffff;
+}
+
+/* Input Monitor */
+.input-monitor {
+    min-height: 100px;
+}
+
+.monitor-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.monitor-status,
+.monitor-input {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+
+.status-text {
+    color: #4a9eff;
+    font-weight: bold;
+}
+
+.input-text {
+    color: #5ab3ff;
+}
+
+/* Right Panel */
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Tab Container */
+.tab-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tab-header {
+    display: flex;
+    background-color: #1b263b;
+    border-bottom: 1px solid #415a77;
+    padding: 0 8px;
+}
+
+.tab {
+    padding: 12px 20px;
+    color: #778da9;
+    border: 1px solid #415a77;
+    border-bottom: none;
+    margin-right: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab:hover {
+    color: #4a9eff;
+}
+
+.tab.active {
+    background-color: #1565c0;
+    color: #ffffff;
+    border-color: #1565c0;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    flex: 1;
+    overflow: hidden;
+}
+
+.tab-content.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Editor Layout */
+.editor-layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    padding: 8px;
+    gap: 8px;
+}
+
+.editor-section {
+    background-color: #1b263b;
+    border: 1px solid #415a77;
+    border-radius: 4px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    min-width: 250px;
+}
+
+.editor-section-large {
+    flex: 1;
+    width: auto;
+}
+
+.section-header {
+    color: #4a9eff;
+    font-weight: bold;
+    font-size: 11pt;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #415a77;
+}
+
+/* Item Lists */
+.item-list {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 12px;
+    background-color: #0d1b2a;
+    border: 1px solid #415a77;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.list-item {
+    padding: 8px;
+    margin: 2px 0;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.list-item:hover {
+    background-color: #2d3e50;
+}
+
+.list-item.selected {
+    background-color: #1565c0;
+    color: #ffffff;
+}
+
+/* Buttons */
+.btn {
+    background-color: #1b263b;
+    color: #4a9eff;
+    border: 1px solid #415a77;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 10pt;
+}
+
+.btn:hover {
+    background-color: #2d3e50;
+    border-color: #4a9eff;
+}
+
+.btn:active {
+    background-color: #415a77;
+}
+
+.btn:disabled {
+    background-color: #1b263b;
+    color: #778da9;
+    border-color: #415a77;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background-color: #1565c0;
+    color: #ffffff;
+    border-color: #1976d2;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #1976d2;
+    border-color: #4a9eff;
+}
+
+.btn-success {
+    background-color: #2e7d32;
+    color: #ffffff;
+    border-color: #388e3c;
+}
+
+.btn-success:hover {
+    background-color: #388e3c;
+}
+
+.btn-warning {
+    background-color: #f57c00;
+    color: #ffffff;
+    border-color: #fb8c00;
+}
+
+.btn-warning:hover {
+    background-color: #fb8c00;
+}
+
+.btn-danger {
+    background-color: #d32f2f;
+    color: #ffffff;
+    border-color: #f44336;
+}
+
+.btn-danger:hover {
+    background-color: #f44336;
+}
+
+.btn-play {
+    background-color: #2e7d32;
+    color: #ffffff;
+    border-color: #388e3c;
+    flex: 1;
+}
+
+.btn-stop {
+    background-color: #d32f2f;
+    color: #ffffff;
+    border-color: #f44336;
+    flex: 1;
+}
+
+/* Button Groups */
+.button-group {
+    display: flex;
+    gap: 8px;
+}
+
+/* Playback Controls */
+.playback-controls {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #415a77;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.repeat-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.repeat-control label {
+    color: #e0e1dd;
+    font-weight: bold;
+}
+
+.repeat-control input {
+    background-color: #0d1b2a;
+    color: #e0e1dd;
+    border: 1px solid #415a77;
+    border-radius: 4px;
+    padding: 6px 12px;
+    width: 150px;
+    font-size: 10pt;
+}
+
+.repeat-control input:focus {
+    outline: none;
+    border-color: #4a9eff;
+}
+
+.playback-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+/* Trigger Configuration */
+.trigger-config {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.placeholder-text {
+    color: #778da9;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Status Bar */
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b263b;
+    border-top: 1px solid #415a77;
+    padding: 8px 16px;
+    color: #778da9;
+    font-size: 9pt;
+}
+
+.status-left,
+.status-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-indicator.active {
+    background-color: #4caf50;
+    box-shadow: 0 0 8px #4caf50;
+}
+
+.status-indicator.ready {
+    background-color: #2196f3;
+    box-shadow: 0 0 8px #2196f3;
+}
+
+.status-indicator.monitoring {
+    background-color: #ff9800;
+    box-shadow: 0 0 8px #ff9800;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1b263b;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #415a77;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4a9eff;
+}
+
+/* Selection */
+::selection {
+    background-color: #1565c0;
+    color: #ffffff;
+}
+

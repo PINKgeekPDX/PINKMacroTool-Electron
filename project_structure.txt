@@ -1,0 +1,15 @@
+.
+├── README.md
+├── SETUP.md
+├── assets
+│   └── icon.png
+├── package-lock.json
+├── package.json
+├── project_structure.txt
+└── src
+    ├── core
+    ├── gui
+    ├── main.js
+    └── utils
+
+5 directories, 7 files
